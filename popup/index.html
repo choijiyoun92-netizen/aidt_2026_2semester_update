@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 디지털 교육자료 2026 2학기 업데이트</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- 실제 AIDT 적용 시 아래 demo-background 영역은 제거하고,
+       기존 서비스 화면 위에 .update-layer 만 노출하면 됩니다. -->
+  <main class="demo-background" aria-hidden="true">
+    <div class="demo-topbar"></div>
+    <div class="demo-shell">
+      <aside class="demo-sidebar"></aside>
+      <section class="demo-content">
+        <div class="demo-hero"></div>
+        <div class="demo-card-grid">
+          <div class="demo-card"></div>
+          <div class="demo-card"></div>
+          <div class="demo-card"></div>
+          <div class="demo-card"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="update-layer" id="updateLayer">
+    <section class="update-modal" role="dialog" aria-modal="true" aria-labelledby="updateTitle">
+      <div class="update-modal__content">
+        <span class="update-chip">
+          <span class="update-chip__dot" aria-hidden="true"></span>
+          2026 2학기 UPDATE
+        </span>
+
+        <h1 class="update-title" id="updateTitle">
+          <span>AI 디지털 교육자료</span>
+          <span class="update-title__accent-wrap">
+            <strong class="update-title__accent">2학기 주요 업데이트</strong>
+            <em class="new-badge" aria-label="새로운 업데이트">NEW</em>
+          </span>
+        </h1>
+
+        <p class="update-description">
+          더 편리한 수업과 학습을 위해<br />
+          <strong>수업 도구, 스스로 학습, AI 분석 등 주요 기능을 개선했어요.</strong><br />
+          새로워진 기능을 지금 확인해 보세요.
+        </p>
+      </div>
+
+      <footer class="update-modal__footer">
+        <div class="copyright">© 비상교육</div>
+
+        <label class="skip-check">
+          <input type="checkbox" id="skipToday" />
+          <span class="skip-check__box" aria-hidden="true"></span>
+          <span class="skip-check__label">다시 보지 않기</span>
+        </label>
+
+        <button type="button" class="confirm-button" id="confirmButton">확인</button>
+      </footer>
+    </section>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
