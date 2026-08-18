@@ -1,0 +1,362 @@
+@charset "utf-8";
+:root{
+  --black:#171719;--gray:#8b8e95;--line:#e5e8ed;--blue:#0aa9ec;--blue2:#3c55ff;
+  --purple:#7158f4;--green:#15b58c;--orange:#ff6036;--cyan:#00aee7;--max:1460px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Pretendard,"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--black);overflow-x:hidden;background:#fff}
+button,input{font:inherit}.screen{min-height:100vh;position:relative;padding:90px 300px 120px 70px;overflow:hidden}
+.screen:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 30% 5%,rgba(0,174,231,.08),transparent 34%),#fff}
+.purple:before{background:radial-gradient(circle at 18% 5%,rgba(113,88,244,.07),transparent 34%),#fff}
+.green:before{background:radial-gradient(circle at 18% 5%,rgba(21,181,140,.07),transparent 34%),#fff}
+.orange:before{background:radial-gradient(circle at 18% 5%,rgba(255,96,54,.07),transparent 34%),#fff}
+.cyan:before{background:radial-gradient(circle at 18% 5%,rgba(0,174,231,.08),transparent 34%),#fff}
+.center,.stage{max-width:var(--max);min-height:calc(100vh - 210px);margin:auto;display:flex;justify-content:center;align-items:center}
+.center{flex-direction:column;text-align:center}.stage{flex-direction:column;align-items:flex-start}
+.hero h1{font-size:clamp(82px,9vw,165px);line-height:.82;letter-spacing:-.075em;margin:60px 0 38px;font-weight:950}
+.hero h1 span,.hero h1 em,.end-title span,.end-title em{display:block;font-style:normal}
+.hero h1 em,.end-title em{background:linear-gradient(90deg,var(--blue),#087ef4 50%,var(--blue2));-webkit-background-clip:text;color:transparent}
+.hero p,.section-intro p,.end p{font-size:clamp(22px,1.6vw,30px);line-height:1.6;color:var(--gray);font-weight:700;margin:0}.hero p strong,.end p strong{color:var(--black)}
+.eyebrow{padding:12px 20px;border:1px solid var(--line);border-radius:999px;font-size:12px;letter-spacing:.3em;font-weight:900;box-shadow:0 5px 18px rgba(20,35,60,.05)}
+.eyebrow b{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--cyan);margin-right:10px}
+small{display:block;color:#a4a7ae;letter-spacing:.2em;font-weight:900;margin-bottom:20px}
+h2{font-size:clamp(54px,5.5vw,96px);line-height:1.02;letter-spacing:-.06em;margin:0;font-weight:950}h2 em{font-style:normal;color:var(--purple)}
+.green h2 em{color:var(--green)}.orange h2 em{color:var(--orange)}.cyan h2 em{color:var(--cyan)}
+.section-intro p{margin-top:42px}.mid{font-size:clamp(52px,4.8vw,84px)}
+.copy{max-width:520px}.copy>p{font-size:21px;line-height:1.7;color:var(--gray);font-weight:650}.split{display:grid;grid-template-columns:.78fr 1.22fr;gap:70px;align-items:center}.two{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:start;width:100%}.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px;width:100%}.top-gap{margin-top:48px}
+.feature h3{font-size:36px;line-height:1.22;letter-spacing:-.045em;margin:12px 0 16px}.feature>p{font-size:18px;line-height:1.7;color:var(--gray);font-weight:650;min-height:64px}.card{padding:36px;border:1px solid var(--line);border-radius:32px;background:rgba(255,255,255,.92);box-shadow:0 16px 50px rgba(30,45,70,.06)}
+.asset{position:relative;border:1px solid #dfe5ed;border-radius:28px;background:#fff;box-shadow:0 28px 70px rgba(32,45,70,.13);overflow:hidden;width:100%}
+.asset img,.asset video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.asset .placeholder{position:absolute;inset:0;padding:26px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#f4f9ff,#fff);color:#707680}
+.placeholder b{font-size:20px;color:var(--black);margin:12px 0 6px}.placeholder p{font-size:14px;line-height:1.5;margin:0 0 10px}.placeholder code{background:#edf6ff;color:#2b78d8;border-radius:8px;padding:7px 10px;font-size:11px}.badge{border-radius:999px;padding:7px 10px;background:#eaf6ff;color:#1884d7;font-size:11px;font-weight:900}.badge.gif{background:#f0eaff;color:#6b4be3}
+.landscape{height:330px}.wide{height:480px}.big{height:560px}.tile{height:410px}.main{height:520px}.hero-asset{height:540px;width:82%;margin:auto}.collage{position:relative;display:block;height:670px}.float{position:absolute;width:34%;height:270px;z-index:3}.float.left{left:2%;bottom:0}.float.right{right:0;top:25px}.stack{width:100%;position:relative;padding:35px}.mini{position:absolute;width:42%;height:245px;right:-5%;bottom:-5%;z-index:3}.mini.left{left:-5%;right:auto}.mini.right{right:-5%;left:auto}
+.bullet{border-top:1px solid var(--line);padding:18px 0}.bullet b{font-size:20px}.bullet p{font-size:16px;color:var(--gray);line-height:1.6}.pill{display:inline-flex;margin-top:22px;border:1px solid #bfeadd;border-radius:999px;padding:12px 16px;color:var(--green);font-weight:900}
+.flow{width:100%;display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:16px;align-items:center;margin:44px 0}.flow div{padding:24px;border:1px solid #dfeae6;border-radius:24px;background:#fff}.flow span{font-size:11px;color:var(--green);font-weight:900;letter-spacing:.15em}.flow b{display:block;font-size:23px;margin:7px 0}.flow p{margin:0;color:var(--gray);font-size:13px}.flow i{font-style:normal;color:#bbb;font-size:24px}
+.end:before{background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.72),transparent 36%),linear-gradient(180deg,#f4fbfe,#d9f3fc 58%,#c8edf8)}
+.end-title{font-size:clamp(84px,8.5vw,150px);line-height:.82;letter-spacing:-.07em}.end p{margin-top:46px}.focus{width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:50px}.focus article{min-height:285px;padding:34px;border-radius:30px;background:#fff;text-align:left;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 16px 46px rgba(30,70,95,.08)}.focus small{color:var(--blue);margin:0}.focus b{font-size:29px;line-height:1.25}.focus span{font-size:10px;letter-spacing:.2em;color:#aaa;font-weight:900}
+.side-nav{position:fixed;right:38px;top:50%;transform:translateY(-50%);z-index:50;width:240px;display:flex;flex-direction:column;gap:18px}.nav-item{display:grid;grid-template-columns:1fr 12px;gap:12px;align-items:center;border:0;background:none;color:#cacdd1;text-align:right;font-size:13px;font-weight:900;cursor:pointer}.nav-item i{width:10px;height:10px;border-radius:50%;background:#d9dadd}.nav-item.active{color:var(--blue)}.nav-item.active i{background:currentColor;box-shadow:0 0 0 5px rgba(10,169,236,.08)}
+.top-close{position:fixed;right:34px;top:32px;z-index:70;width:58px;height:58px;border:0;border-radius:50%;background:#fff;font-size:34px;box-shadow:0 12px 28px rgba(20,35,55,.14);cursor:pointer}
+.bottom{position:fixed;z-index:60;left:50%;bottom:32px;transform:translateX(-50%);height:74px;min-width:420px;border:1px solid var(--line);border-radius:40px;background:rgba(255,255,255,.94);display:flex;align-items:center;justify-content:center;box-shadow:0 18px 42px rgba(20,35,55,.12);backdrop-filter:blur(10px)}.bottom label{display:flex;align-items:center;gap:10px;color:#555;font-weight:700}.bottom label input{display:none}.bottom label span{width:23px;height:23px;border:2px solid #d4d6d9;border-radius:7px}.bottom label input:checked+span{background:var(--blue);box-shadow:inset 0 0 0 5px #fff}.bottom>i{height:30px;width:1px;background:#ddd;margin:0 30px}.bottom button{border:0;background:none;font-weight:950;letter-spacing:.22em;cursor:pointer}
+@media(max-width:1200px){.side-nav{display:none}.screen{padding:80px 35px 120px}.split,.two,.three{grid-template-columns:1fr}.focus{grid-template-columns:1fr 1fr}.collage{height:auto;display:grid;gap:20px}.hero-asset,.float{position:relative;inset:auto;width:100%;height:400px}.stack{padding:0;display:grid;gap:18px}.mini{position:relative;inset:auto;width:100%;height:300px}.flow{grid-template-columns:1fr 1fr}.flow i{display:none}}
+@media(max-width:700px){.screen{padding:90px 18px 110px}.hero h1{font-size:62px}.section-intro h2,h2,.mid{font-size:46px}.focus{grid-template-columns:1fr}.bottom{width:calc(100% - 28px);min-width:0;height:64px}.bottom>i{margin:0 16px}.top-close{width:48px;height:48px;right:18px;top:18px;font-size:28px}.asset{min-height:280px}.big,.wide,.landscape,.tile,.main{height:300px}}
+
+/* =========================================================
+   IMAGE / GIF ORIGINAL VIEW
+   이미지 호버 + 원본 화면 보기 모달
+========================================================= */
+
+/* 실제 이미지/GIF가 로드된 영역 */
+.asset.has-media {
+  cursor: zoom-in;
+}
+
+/* 호버 시 노출되는 오버레이 */
+.asset-preview-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(12, 18, 30, 0.42);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.22s ease,
+    visibility 0.22s ease;
+}
+
+/* 이미지/GIF 영역에 마우스 올렸을 때 */
+.asset.has-media:hover .asset-preview-overlay,
+.asset.has-media:focus-visible .asset-preview-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 원본 화면 보기 버튼 */
+.asset-preview-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 12px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.94);
+  color: #171719;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+
+  transform: translateY(8px);
+  transition: transform 0.22s ease;
+}
+
+.asset.has-media:hover .asset-preview-button {
+  transform: translateY(0);
+}
+
+.asset-preview-icon {
+  font-size: 17px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   원본 보기 모달
+========================================================= */
+
+.original-viewer {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 42px;
+
+  background: rgba(10, 13, 20, 0.86);
+  backdrop-filter: blur(8px);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.original-viewer.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 모달 내부 */
+.original-viewer__content {
+  position: relative;
+
+  width: min(94vw, 1600px);
+  height: min(88vh, 1000px);
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 20px;
+
+  background: #11141a;
+
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.45);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   원본 이미지/GIF 표시 영역
+   - 작은 이미지는 가로/세로 중앙 정렬
+   - 세로가 길면 세로 스크롤
+   - 작은 이미지는 확대하지 않음
+   - 큰 이미지만 가로 최대 폭에 맞춰 축소
+========================================================= */
+
+.original-viewer__media {
+  flex: 1;
+  min-height: 0;
+
+  /* 중앙 정렬을 위한 flex */
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px;
+
+  /* 세로 스크롤만 허용 */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  overscroll-behavior: contain;
+
+  background: #11141a;
+}
+
+
+/* 이미지 / GIF */
+.original-viewer__media img {
+  position: static;
+
+  display: block;
+
+  /* 원본 크기는 유지 */
+  width: auto;
+  height: auto;
+
+  /* 모달보다 넓은 경우에만 축소 */
+  max-width: 100%;
+
+  /* 세로는 강제로 축소하지 않음 */
+  max-height: none;
+
+  object-fit: contain;
+
+  /*
+    핵심:
+    이미지가 작으면 남는 공간을 margin이 나눠 가져
+    가로/세로 중앙에 배치됨.
+
+    이미지가 세로 영역보다 크면
+    auto margin이 사실상 사라지고 상단부터 시작하여
+    세로 스크롤 가능.
+  */
+  margin: auto;
+
+  /* 큰 이미지가 flex 때문에 강제로 줄어들지 않도록 */
+  flex: 0 0 auto;
+}
+
+
+/* MP4 / WEBM */
+.original-viewer__media video {
+  position: static;
+
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: none;
+
+  object-fit: contain;
+
+  margin: auto;
+
+  flex: 0 0 auto;
+}
+
+/* =========================================================
+   원본 보기 모달 세로 스크롤바
+========================================================= */
+
+.original-viewer__media::-webkit-scrollbar {
+  width: 10px;
+}
+
+.original-viewer__media::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+}
+
+.original-viewer__media::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+}
+
+.original-viewer__media::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.42);
+}
+
+/* Firefox */
+.original-viewer__media {
+  scrollbar-width: thin;
+  scrollbar-color:
+    rgba(255, 255, 255, 0.3)
+    rgba(255, 255, 255, 0.06);
+}
+
+/* 하단 기능명 */
+.original-viewer__caption {
+  min-height: 62px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 28px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* 우측 상단 닫기 */
+.original-viewer__close {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+
+  z-index: 5;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(20, 24, 32, 0.78);
+  color: #ffffff;
+
+  font-size: 27px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+}
+
+.original-viewer__close:hover {
+  background: rgba(20, 24, 32, 0.95);
+}
+
+/* 모달이 열려 있을 때 본문 스크롤 방지 */
+body.viewer-open {
+  overflow: hidden;
+}
+
+
+/* 모바일 */
+@media (max-width: 700px) {
+  .original-viewer {
+    padding: 16px;
+  }
+
+  .original-viewer__content {
+    width: 100%;
+    height: 86vh;
+    border-radius: 16px;
+  }
+
+  .original-viewer__media {
+    padding: 12px;
+  }
+
+  .original-viewer__caption {
+    min-height: 54px;
+    padding: 0 18px;
+
+    font-size: 13px;
+  }
+
+  .original-viewer__close {
+    top: 10px;
+    right: 10px;
+
+    width: 40px;
+    height: 40px;
+  }
+}
